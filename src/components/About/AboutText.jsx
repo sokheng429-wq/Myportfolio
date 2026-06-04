@@ -17,8 +17,7 @@ function AboutText() {
       </p>
 
       <p className="fs-5 mb-4">
-        My main stack includes React, Next.js, Node.js, and PostgreSQL/MySQL.
-        I also have experience with Java and Spring Boot.
+        My main stack includes Java,Spring Boot ,React, Next.js, Node.js, and PostgreSQL/MySQL.
       </p>
 
       <p className="fs-5 mb-4">
