@@ -1,13 +1,9 @@
-import PomoImg from  "../img/proj/pomodorify-thumb.png"
-import BookOwlImg from "../img/proj/bookowl-thumb.png"
-import GetMP3Img from "../img/proj/mp3-thumb.png"
-import ShoutImg from "../img/proj/Shoutout-thumb.png"
-import MoodImg from "..//img/proj/mood-thumb.png"
 import student from "../img/proj/student.jpg"
 import camland from "../img/proj/camland.jpg"
 import el from "../img/proj/el.jpg"
 import login from "../img/proj/loginspring.jpg"
 import car from "../img/proj/car.jpg"
+import ems from "../img/ems.jpg"
 
 const projects = [
     {
@@ -53,11 +49,24 @@ const projects = [
     {
         id: 5,
         navId: "5",
+        title: 'EMS (Employee Management System) ',
+        description: 'A simple employee management system built with Spring Boot and PostgreSQL.',
+        imgSrc: ems,
+        codeLinks: [
+            { label: 'Frontend', url: 'https://github.com/sokheng429-wq/ems-frontend.git' },
+            { label: 'Backend', url: 'https://github.com/sokheng429-wq/ems-backend.git' },
+        ],
+        demoLink: 'https://www.youtube.com/watch?v=cy6v3E6Rf0A',
+        technologies: ['Java', 'Spring Boot', 'PostgreSQL']
+    },
+    {
+        id: 6,
+        navId: "6",
         title: 'Mini-Car 🚗',
         description: "still on development, this is a mini car game build with nextjs and nodejs SQL database use PostgreSQL",
         imgSrc: car,
         codeLink: 'https://github.com/sokheng429-wq/Mini-cars.git',
-        demoLink: 'https://youtu.be/v4QvwNLLYQQ',
+        demoLink: 'https://www.youtube.com/watch?v=cy6v3E6Rf0A',
         technologies: ['PostgreSQL', 'MUI', 'Node', 'NextJS']
     },
    

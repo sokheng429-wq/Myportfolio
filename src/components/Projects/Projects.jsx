@@ -26,6 +26,7 @@ function Projects () {
                             imgSrc={project.imgSrc}
                             navId={project.navId}
                             codeLink={project.codeLink}
+                            codeLinks={project.codeLinks}
                             demoLink={project.demoLink}
                             technologies={project.technologies}
                             className={project.id % 2 === 0 ? '' : 'flex-lg-row-reverse'} 
