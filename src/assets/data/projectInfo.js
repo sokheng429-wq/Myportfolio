@@ -32,9 +32,12 @@ const projects = [
         title: 'Elephant Tour Booking System Web Application 🐘',
         description: 'still on development, this is a web application for booking elephant tour in cambodia, build with reactjs and redux for state management',
         imgSrc: el,
-        codeLink: 'https://github.com/sokheng429-wq/Elephant-Tour-Booking-System-Web-application-at-Mondulkiri.git',
-        demoLink: 'https://www.youtube.com/watch?v=TkFjtVo8RLU',
-        technologies: ['Java', 'SpringBoot','SpringSecurity', 'MySQL']
+        codeLinks: [
+            { label: 'Frontend', url: 'https://github.com/sokheng429-wq/EBM-Frontend.git' },
+            { label: 'Backend', url: 'https://github.com/sokheng429-wq/EBM-Backend.git' },
+        ],
+        demoLink: 'https://mdkelephant.fit/',
+        technologies: ['Reactjs', 'SpringBoot','SpringSecurity', 'MySQL']
     },
     {
         id: 4,
@@ -44,7 +47,7 @@ const projects = [
         imgSrc: login,
         codeLink: 'https://github.com/sokheng429-wq/SPRINGSECURITY.git',
         demoLink: 'https://youtu.be/UF1X8qwNKTs',
-        technologies: ['Java', 'Spring Boot', 'Spring Security', 'MySQL']
+        technologies: ['Spring Boot', 'Spring Security', 'MySQL']
     },
     {
         id: 5,
@@ -57,7 +60,7 @@ const projects = [
             { label: 'Backend', url: 'https://github.com/sokheng429-wq/ems-backend.git' },
         ],
         demoLink: 'https://www.youtube.com/watch?v=cy6v3E6Rf0A',
-        technologies: ['Java', 'Spring Boot', 'PostgreSQL']
+        technologies: ['Reactjs', 'Spring Boot', 'PostgreSQL']
     },
     {
         id: 6,

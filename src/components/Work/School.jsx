@@ -3,7 +3,7 @@ import EducItem from "./EducItem";
 function School() {
   const educationData = [
     {
-      title: "JAVA PISTH SCHOOL",
+      title: "JAVA PISETH SCHOOL",
       duration:"Online School",
       link: "https://t.me/ingpiseth"
     },

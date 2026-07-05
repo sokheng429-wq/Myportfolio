@@ -1,5 +1,12 @@
-import { createRoot } from 'react-dom/client'
-import App from './App'
-import './styles/index.css'
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import { ThemeProvider } from "./components/Contact/ThemContext";
+import "./styles/index.css";
 
-createRoot(document.getElementById('root')).render(<App />)
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(
+  <ThemeProvider>
+    <App />
+  </ThemeProvider>
+);

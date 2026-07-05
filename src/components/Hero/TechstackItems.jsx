@@ -24,17 +24,17 @@ function TechstackItems() {
     { svg: <HtmlIcon size="tech-stack-item" />, bgColor: "#ff3700", alt: "HTML" },
     { svg: <CssIcon size="tech-stack-item" />, bgColor: "#0033ff", alt: "CSS" },
     { svg: <JsIcon size="tech-stack-item" />, bgColor: "#ffe100", alt: "JavaScript" },
-    { svg: <PyIcon size="tech-stack-item" />, bgColor: "white", alt: "Python" },
-    { svg: <SiNextdotjs size={28} color="#000000" />, bgColor: "#ffffff", alt: "Next.js" },
+    { svg: <PyIcon size="tech-stack-item" />, bgColor: "var(--tech-stack-bg)", alt: "Python" },
+    { svg: <SiNextdotjs size={28} color="currentColor" />, bgColor: "var(--tech-stack-bg)", alt: "Next.js" },
 
     { svg: <NodeIcon size="tech-stack-item" />, bgColor: "#333333", alt: "Node.js" },
     { svg: <ReactIcon size="tech-stack-item" />, bgColor: "#333333", alt: "React" },
     { svg: <PostgreIcon size="tech-stack-item" />, bgColor: "#0764b0", alt: "PostgreSQL" },
-    { svg: <SiMysql size={28} color="#00758f" />, bgColor: "#ffffff", alt: "MySQL" },
+    { svg: <SiMysql size={28} color="currentColor" />, bgColor: "var(--tech-stack-bg)", alt: "MySQL" },
 
-    { svg: <FaJava size={28} color="#f89820" />, bgColor: "#ffffff", alt: "Java" },
-    { svg: <SiSpringboot size={28} color="#6db33f" />, bgColor: "#ffffff", alt: "Spring Boot" },
-    { svg: <SiMui size={28} color="#007fff" />, bgColor: "#ffffff", alt: "Material UI" },
+    { svg: <FaJava size={28} color="#f89820" />, bgColor: "var(--tech-stack-bg)", alt: "Java" },
+    { svg: <SiSpringboot size={28} color="#6db33f" />, bgColor: "var(--tech-stack-bg)", alt: "Spring Boot" },
+    { svg: <SiMui size={28} color="#007fff" />, bgColor: "var(--tech-stack-bg)", alt: "Material UI" },
     ];
 
   return (

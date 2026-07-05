@@ -2,7 +2,7 @@ function WorkExpItem({icon, title, date, description}) {
     return (
         <div className="col-12 col-xl-6 d-flex align-items-start mt-4 ">
             
-            <div className=" icon-square text-body-emphasis bg-white start d-inline-flex fs-4 flex-shrink-0 me-3">
+            <div className=" icon-square text-body-emphasis theme-icon-square start d-inline-flex fs-4 flex-shrink-0 me-3">
              {icon}
             </div>
 

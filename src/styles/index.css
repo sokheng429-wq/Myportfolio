@@ -1,20 +1,100 @@
 /*Navbar*/
 .nav-item, .navbar{
-  background-color: white ;
+  background-color: var(--navbar-bg);
+  color: var(--navbar-text);
+}
+
+.navbar-brand,
+.nav-link,
+.dropdown-item,
+.navbar-toggler-icon {
+  color: var(--navbar-text) !important;
+}
+
+  .navbar .nav-link,
+  .navbar .dropdown-item {
+    background-color: transparent !important;
   }
 
-  #logo {
-    margin-left: 30px;
-    font-weight: bold ;
+  .navbar-brand:hover,
+  .nav-link:hover,
+  .dropdown-item:hover {
+    color: var(--accent) !important;
+    background-color: rgba(255,255,255,0.05) !important;
   }
-  .nav-item, .dropdown-item {
-    padding-left: 30px;      
-    font-size: 18px;
-    font-weight: bold ;
+
+  .nav-link.active,
+  .dropdown-item.active,
+  .nav-link:active,
+  .dropdown-item:active,
+  .dropdown-item:focus,
+  .nav-link:focus {
+    background-color: rgba(255,255,255,0.1) !important;
+    color: var(--text-color) !important;
   }
+
+  .dropdown-menu {
+    background-color: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+  }
+
+  .dropdown-item {
+    color: var(--text-color) !important;
+  }
+
+  .dropdown-item:hover,
+  .dropdown-item:focus,
+  .dropdown-item.active {
+    background-color: rgba(255,255,255,0.08) !important;
+    color: var(--text-color) !important;
+  color: var(--button-color) !important;
+  border-color: var(--button-border) !important;
+  background-color: var(--button-bg) !important;
+}
+
+.theme-toggle-btn:hover,
+.theme-toggle-btn:focus {
+  background-color: var(--button-hover-bg) !important;
+  color: var(--button-color) !important;
+}
+
+.btn-outline-secondary {
+  color: var(--button-color) !important;
+  border-color: var(--button-border) !important;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  background-color: var(--button-hover-bg) !important;
+  color: var(--button-color) !important;
+}
+
+.btn-primary {
+  background-color: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #ffffff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: rgba(96, 165, 250, 0.9) !important;
+  border-color: rgba(96, 165, 250, 0.9) !important;
+}
+
+.form-signin,
+.form-floating {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+.form-signin {
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+}
 
   .navbar-brand:hover,  .nav-link:hover, .dropdown-item:hover {
-    color:#147efb;
+    color: var(--accent) !important;
   }
 
  
@@ -29,14 +109,14 @@
     font-size: 1em
   }
   .off-white {
-    background-color: #f9f9f9;
+    background-color: var(--surface-bg);
   }
 
   #hero-img {
-    border: 3px solid black;
+    border: 3px solid var(--hero-border);
     width: 350px;
     height: 350px;
-    background-color: coral;
+    background-color: var(--hero-bg);
     background-image: url('../assets/img/prof1.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -70,9 +150,11 @@
   }
 
   .app {
-    border: 2px solid black;
+    border: 2px solid var(--border-color);
     border-radius: 15px;
     margin: 5px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
   }
 
   .tech-stack {
@@ -82,6 +164,8 @@
     justify-content: center;         
     align-items: center; 
     cursor: pointer;                 
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    background-color: var(--tech-stack-bg);
   }
   
   .tech-stack-item {
@@ -89,14 +173,25 @@
   }
   
 
-  .icon{
-    fill: #000; 
-    height: 43px; 
+  .icon,
+  .tech-stack svg,
+  .theme-icon-square svg,
+  .icon * {
+    fill: currentColor !important;
+    stroke: currentColor !important;
+    color: currentColor !important;
   }
-  
-  .icon:hover {
-    fill: #147efb;
-  } 
+
+  .icon {
+    height: 43px;
+  }
+
+  .icon:hover,
+  .theme-icon-square:hover svg,
+  .tech-stack:hover svg {
+    fill: var(--accent) !important;
+    color: var(--accent) !important;
+  }
 
   #work {
     margin-top: 7rem;
@@ -185,7 +280,7 @@
   .fs-5 {
     font-weight: 350;
     font-size: 18px !important;
-    color:rgb(88, 88, 88);
+    color: var(--muted-text);
   }
   .fs-6 {
     font-weight: 600;
@@ -205,7 +300,8 @@
     text-transform: uppercase;
     font-family:'Courier New', Courier, monospace;
     font-size: 16px;
-    fill: #111;
+    color: var(--text-color);
+    fill: var(--text-color);
     z-index: 1;
   }
 
@@ -235,9 +331,15 @@
 
   .main img {
     position: absolute;
-    background-color: white;
+    background-color: var(--card-bg);
     border-radius: 50%;
     padding: 20px;
+  }
+
+  .round {
+    border-radius: 30px;
+    border: 2px solid var(--border-color);
+    background-color: var(--card-bg);
   }
 
   /*Portfolio*/
@@ -250,15 +352,16 @@
 
   .round {
     border-radius: 30px;
-    border: 2px solid black;
+    border: 2px solid var(--border-color);
+    background-color: var(--card-bg);
   }
   .plink {
-    color: black !important;
+    color: var(--link-color) !important;
     text-decoration: none;
 
   }
   .plink:hover{
-    color: #1480fa !important;
+    color: var(--accent) !important;
   }
 
 
@@ -292,16 +395,80 @@
   } 
   
   #footer {
-    background-color:#2D2E32;
+    background-color: var(--footer-bg);
     height: 100%;
-   
+    color: var(--text-color);
   }
   .buttonp{
-    color: black !important;
+    color: var(--button-color) !important;
   }
 
-  .form-control {
+  .bg-white,
+  .bg-body-secondary,
+  .modal-content,
+  .navbar,
+  .card,
+  .off-white,
+  #hero-img,
+  #footer,
+  .theme-icon-square,
+  .form-control,
+  .round,
+  .tech-stack {
+    background-color: var(--card-bg) !important;
+  }
+
+  .bg-body-secondary {
+    background-color: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+  }
+
+  .text-body-emphasis {
+    color: var(--text-color) !important;
+  }
+
+  .theme-icon-square {
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+  }
+
+  .form-control,
+  .form-control:focus,
+  .form-control:active,
+  .form-control:disabled,
+  .form-control[disabled],
+  textarea.form-control,
+  input.form-control {
     width: 100%;
+    background-color: var(--card-bg) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: none !important;
+  }
+
+  .form-control::placeholder {
+    color: var(--muted-text) !important;
+    opacity: 1 !important;
+  }
+
+  .form-floating {
+    background-color: transparent;
+  }
+
+  .form-floating label {
+    color: var(--muted-text);
+    background-color: var(--card-bg);
+    padding: 0 0.3rem;
+  }
+
+  .form-floating .form-control:focus ~ label {
+    color: var(--accent);
+  }
+
+  .theme-icon-square {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
   }
 
   .edu-card {
@@ -359,4 +526,70 @@
   text-decoration: none;
   display: block;
   color: inherit;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #212529;
+  --card-bg: #ffffff;
+  --surface-bg: #f9f9f9;
+  --panel-bg: #f8f9fa;
+  --border-color: rgba(0, 0, 0, 0.12);
+  --muted-text: rgb(88, 88, 88);
+  --accent: #147efb;
+  --hero-border: #000000;
+  --hero-bg: coral;
+  --navbar-bg: #ffffff;
+  --navbar-text: #212529;
+  --button-bg: transparent;
+  --button-border: rgba(0, 0, 0, 0.18);
+  --button-hover-bg: rgba(20, 20, 20, 0.05);
+  --button-color: #212529;
+  --link-color: #000000;
+  --icon-fill: #000000;
+  --footer-bg: #f8fafc;
+  --tech-stack-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #0f1720;
+  --text-color: #f8fafc;
+  --card-bg: #161b25;
+  --surface-bg: #141b2e;
+  --panel-bg: #1f2937;
+  --border-color: rgba(255, 255, 255, 0.16);
+  --muted-text: #cbd5e1;
+  --accent: #60a5fa;
+  --hero-border: #94a3b8;
+  --hero-bg: #25303e;
+  --navbar-bg: #111827;
+  --navbar-text: #f8fafc;
+  --button-bg: rgba(255, 255, 255, 0.05);
+  --button-border: rgba(255, 255, 255, 0.24);
+  --button-hover-bg: rgba(255, 255, 255, 0.1);
+  --button-color: #f8fafc;
+  --link-color: #f8fafc;
+  --icon-fill: #f8fafc;
+  --footer-bg: #111827;
+  --tech-stack-bg: #1f2937;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar,
+.card,
+.form-control,
+.off-white,
+#hero-img,
+#footer {
+  background-color: var(--card-bg) !important;
+  color: var(--text-color) !important;
+}
+
+#footer {
+  background-color: var(--navbar-bg) !important;
 }

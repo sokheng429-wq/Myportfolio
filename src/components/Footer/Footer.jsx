@@ -7,7 +7,7 @@ function Footer() {
             <div className="container col-xl-12 col-xxl-8 py-5 ">
                 <footer className="d-flex flex-wrap justify-content-between align-items-center px-2 mt-2">
                     <div className="col-6 d-flex justify-content-start">
-                        <p className="px-4 fs-6" style={{ color: 'white' }}><b>
+                        <p className="px-4 fs-6"><b>
                             Hired Me pls i need a job 😢😭
                         </b></p>
                     </div>

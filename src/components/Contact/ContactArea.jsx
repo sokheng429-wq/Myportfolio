@@ -41,19 +41,19 @@ function ContactArea () {
         <>
     
 
-            <main class="form-signin col-12 text-center pt-2 mb-5 mx-auto">
+            <main className="form-signin col-12 text-center pt-2 mb-5 mx-auto">
             <form ref={form} onSubmit={sendEmail} >
 
-                <div class="form-floating my-4  rounded round">
-                <input name="user_email" type="email" class="w-100 form-control" id="floatingInput" placeholder="name@example.com" required/>
-                <label for="floatingInput">Email address</label>
+                <div className="form-floating my-4 rounded round">
+                <input name="user_email" type="email" className="w-100 form-control" id="floatingInput" placeholder="name@example.com" required/>
+                <label htmlFor="floatingInput">Email address</label>
                 </div>
-                <div class="form-floating my-4  rounded round ">
-                <textarea name="message" rows="4" class="w-100 h-50 form-control" id="floatingPassword" placeholder="Message" required></textarea>
-                <label for="floatingPassword">Message</label>
+                <div className="form-floating my-4 rounded round">
+                <textarea name="message" rows="4" className="w-100 h-50 form-control" id="floatingPassword" placeholder="Message" required></textarea>
+                <label htmlFor="floatingPassword">Message</label>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-lg px-4 me-md-2">Send</button>
+                <button type="submit" className="btn btn-primary btn-lg px-4 me-md-2">Send</button>
             </form>
             </main>
         </>
