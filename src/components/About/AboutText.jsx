@@ -10,7 +10,7 @@ function AboutText() {
         },
         {
             label: "UI / Styling",
-            items: ["Material UI", "Tailwind CSS"],
+            items: ["Material UI", "Tailwind CSS", "Bootstrap"],
         },
         {
             label: "Databases",
