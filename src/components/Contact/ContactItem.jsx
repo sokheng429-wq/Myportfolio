@@ -1,22 +1,33 @@
-function ContactItem({ icon, title, detail, link }) {
-    return (
-        <div className="col d-flex align-items-start mt-5">
-            <div className="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center flex-shrink-0 me-3">
+function ContactItem({ icon, title, detail, link, onClick }) {
+    const content = (
+        <div className="contact-card">
+            <div className="contact-card-icon">
                 {icon}
             </div>
-            <div>
-                <p className="start fs-6 pcon pcon"><b>
-                    {title}
-                </b>
-                </p>
-                <a href={link} target="_blank" rel="noopener noreferrer" className="plink">
-                    <p className="fs-5 text-start plink">
-                        {detail}
-                    </p>
-                </a>
+            <div className="contact-card-body">
+                <span className="contact-card-title">{title}</span>
+                <span className="contact-card-detail">{detail}</span>
             </div>
         </div>
     );
+
+    if (link) {
+        return (
+            <a href={link} target="_blank" rel="noopener noreferrer" className="contact-card-link">
+                {content}
+            </a>
+        );
+    }
+
+    if (onClick) {
+        return (
+            <span onClick={onClick} className="contact-card-link" style={{ cursor: "pointer" }}>
+                {content}
+            </span>
+        );
+    }
+
+    return content;
 }
 
 export default ContactItem;

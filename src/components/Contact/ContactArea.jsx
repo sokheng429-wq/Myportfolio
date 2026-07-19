@@ -1,62 +1,68 @@
-import emailjs from "@emailjs/browser"
-import { useRef } from 'react'
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
 
-
-function ContactArea () {
+function ContactArea() {
     const form = useRef();
-
+    const [sent, setSent] = useState(false);
 
     const sendEmail = (e) => {
         e.preventDefault();
-        // replace with your information
         emailjs
-          .sendForm(
-            //make .env in root folder
-            //npm i dot env
-            // replace the codes with .env
-            import.meta.env.VITE_EMAIL_SERVICE_ID,
-            import.meta.env.VITE_EMAIL_TEMPLATE_ID,
-            form.current,
-            import.meta.env.VITE_EMAIL_USER_ID
-          )
-       
-          .then(
-            (result) => {
-                console.log(result.text);
-                console.log("message sent");
-                //add alert for user
-                alert("Message sent successfully!");
-
-
-                // Clear all input fields in the form
-                form.current.reset(); // Reset the form fields
-            },
-            (error) => {
-              console.log(error.text);
-            }
-          );
-      };
+            .sendForm(
+                import.meta.env.VITE_EMAIL_SERVICE_ID,
+                import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+                form.current,
+                import.meta.env.VITE_EMAIL_USER_ID
+            )
+            .then(
+                () => {
+                    setSent(true);
+                    form.current.reset();
+                    setTimeout(() => setSent(false), 4000);
+                },
+                (error) => {
+                    console.log(error.text);
+                    alert("Failed to send message. Please try again.");
+                }
+            );
+    };
 
     return (
-        <>
-    
-
-            <main className="form-signin col-12 text-center pt-2 mb-5 mx-auto">
-            <form ref={form} onSubmit={sendEmail} >
-
-                <div className="form-floating my-4 rounded round">
-                <input name="user_email" type="email" className="w-100 form-control" id="floatingInput" placeholder="name@example.com" required/>
-                <label htmlFor="floatingInput">Email address</label>
+        <div className="contact-form-wrapper">
+            <h3 className="contact-form-heading">Send me a message</h3>
+            <form ref={form} onSubmit={sendEmail} className="contact-form">
+                <div className="contact-input-group">
+                    <input
+                        name="user_name"
+                        type="text"
+                        className="contact-input"
+                        placeholder="Your name"
+                        required
+                    />
                 </div>
-                <div className="form-floating my-4 rounded round">
-                <textarea name="message" rows="4" className="w-100 h-50 form-control" id="floatingPassword" placeholder="Message" required></textarea>
-                <label htmlFor="floatingPassword">Message</label>
+                <div className="contact-input-group">
+                    <input
+                        name="user_email"
+                        type="email"
+                        className="contact-input"
+                        placeholder="Your email"
+                        required
+                    />
                 </div>
-
-                <button type="submit" className="btn btn-primary btn-lg px-4 me-md-2">Send</button>
+                <div className="contact-input-group">
+                    <textarea
+                        name="message"
+                        rows="5"
+                        className="contact-input contact-textarea"
+                        placeholder="Your message..."
+                        required
+                    ></textarea>
+                </div>
+                <button type="submit" className="contact-submit-btn">
+                    {sent ? "Message Sent!" : "Send Message"}
+                </button>
             </form>
-            </main>
-        </>
+        </div>
     );
 }
 

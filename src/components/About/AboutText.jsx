@@ -1,43 +1,90 @@
 function AboutText() {
-  return (
-    <div className="col-md-7 col-lg-7 about-def text-center text-md-start">
-      
-      <p className="fs-6 title">
-        <b>ABOUT ME</b>
-      </p>
+    const skillGroups = [
+        {
+            label: "Languages",
+            items: ["Java", "C#", "Python", "JavaScript", "HTML", "CSS", "Dart"],
+        },
+        {
+            label: "Frameworks",
+            items: ["React", "Next.js", "Spring Boot", "Node.js", "Express", "FastAPI", "Flutter", "Laravel"],
+        },
+        {
+            label: "UI / Styling",
+            items: ["Material UI", "Tailwind CSS"],
+        },
+        {
+            label: "Databases",
+            items: ["MySQL", "PostgreSQL", "SQL Server"],
+        },
+        {
+            label: "Deploy",
+            items: ["Cloudflare", "Render"],
+        },
+        {
+            label: "Version Control",
+            items: ["Git", "GitHub"],
+        },
+    ];
 
-      <h2 className="h3 fw-bold text-body-emphasis lh-1 mb-4">
-        Full-Stack Developer <br />
-        based in Phnom Penh, Cambodia 📍
-      </h2>
+    const bioStats = [
+        { label: "Birthday", value: "May 23, 2003", icon: "🎂" },
+        { label: "Blood Type", value: "B", icon: "🩸" },
+    ];
 
-      <p className="fs-5 mb-4">
-        Hey, my name is Thoeun SokHeng. I&apos;m a Full-Stack Developer passionate
-        about building practical applications with clean and user-friendly UI/UX.
-      </p>
+    return (
+        <div className="col-md-7 col-lg-7 about-text">
+            <div className="section-header">
+                <div className="section-header-top">
+                    <span className="section-header-accent"></span>
+                    <p className="fs-6 title section-header-label">
+                        <b>ABOUT ME</b>
+                    </p>
+                </div>
+            </div>
 
-      <p className="fs-5 mb-4">
-        My main stack includes Java,Spring Boot ,React, Next.js, Node.js, and PostgreSQL/MySQL.
-      </p>
+            <h2 className="h3 fw-bold text-body-emphasis lh-1 mb-4">
+                Full-Stack Developer
+                <br />
+                based in Phnom Penh, Cambodia
+            </h2>
 
-      <p className="fs-5 mb-4">
-        I am currently looking for an internship or junior developer role to
-        further improve my skills and gain real-world development experience.
-      </p>
+            <p className="fs-5 about-intro">
+                Hey, I&apos;m <b>Thoeun SokHeng</b> — a passionate full-stack developer who loves crafting clean,
+                functional web & mobile apps. I focus on writing maintainable code and
+                delivering great user experiences. Currently seeking an internship or
+                junior role to grow and ship real-world products.
+            </p>
 
-      <div className="fs-5">
-        <b>Technical Skills:</b>
-        <ul className="mt-2">
-          <li>Programming Languages: Java / Python / C# / JavaScript / HTML / CSS / Dart /</li>
-          <li>Frontend: React / Next.js / Flutter / Laravel</li>
-          <li>Backend: Spring Boot / Node.js / Express / FastApi </li>
-          <li>UI / Styling: Material UI / Tailwind CSS</li>
-          <li>Database: MySQL / SQL Server / PostgreSQL</li>
-          <li>Version Control: Git / GitHub</li>
-        </ul>
-      </div>
-    </div>
-  );
+            {/* Bio stats */}
+            <div className="about-bio-row">
+                {bioStats.map((item, i) => (
+                    <div key={i} className="about-bio-stat">
+                        <span className="about-bio-icon">{item.icon}</span>
+                        <div>
+                            <span className="about-bio-label">{item.label}</span>
+                            <span className="about-bio-value">{item.value}</span>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <div className="about-skills">
+                <p className="about-skills-title">Technical Skills</p>
+                <div className="skills-grid">
+                    {skillGroups.map((group, i) => (
+                        <div key={i} className="skill-group">
+                            <span className="skill-group-label">{group.label}</span>
+                            <div className="skill-group-tags">
+                                {group.items.map((skill, j) => (
+                                    <span key={j} className="skill-tag">{skill}</span>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default AboutText;

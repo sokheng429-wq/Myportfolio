@@ -1,17 +1,15 @@
-import TechstackHeader from "./TechstackHeader"
-import TechstackItems from "./TechstackItems"
-function TechStack () {
-    return (
-        <div className="tech row flex-lg-row align-items-center py-5">
-        <TechstackHeader />
+import TechstackHeader from "./TechstackHeader";
+import TechstackItems from "./TechstackItems";
 
-        <div className="col-md-10 mx-auto col-lg-10">
-            <div className="row justify-content-center ">
+function TechStack() {
+    return (
+        <div className="tech-stack-section py-5">
+            <TechstackHeader />
+            <div className="tech-stack-grid">
                 <TechstackItems />
             </div>
         </div>
-    </div>
-    )
+    );
 }
 
-export default TechStack 
+export default TechStack;

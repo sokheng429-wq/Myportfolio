@@ -9,7 +9,7 @@ npm run dev        # Start dev server (Vite)
 npm run build      # Production build to dist/
 npm run preview    # Preview production build locally
 npm run lint       # ESLint on all JS/JSX files
-npm run deploy     # Build + deploy to gh-pages
+npm run deploy     # Build + deploy to gh-pages (predeploy hook runs build automatically)
 ```
 
 There are no tests configured in this project.
@@ -41,7 +41,7 @@ App
 
 ### Theming
 
-Dark/light theme is handled via React Context in `src/components/Contact/ThemContext.jsx`. The provider wraps the app in `main.jsx`. Theme state is persisted to `localStorage` and applied via a `data-theme` attribute on `<html>`. CSS variables (e.g., `--navbar-bg`, `--text-color`, `--card-bg`) are used in `src/styles/index.css` for theme-aware styling. Components access the theme via the `useTheme()` hook.
+Dark/light theme is handled via React Context in `src/components/Contact/ThemContext.jsx` (note: the file has a typo — "Them" instead of "Theme" — and lives under `Contact/` despite being app-wide). The provider wraps the app in `main.jsx`. Theme state is persisted to `localStorage` and applied via a `data-theme` attribute on `<html>`. CSS variables (e.g., `--navbar-bg`, `--text-color`, `--card-bg`) are used in `src/styles/index.css` for theme-aware styling. Components access the theme via the `useTheme()` hook.
 
 ### Data
 

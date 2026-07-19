@@ -7,7 +7,8 @@
       "Read(//c/Users/User/Desktop/**)",
       "Read(//c/Users/User/Downloads/**)",
       "Read(//c/Users/User/Pictures/**)",
-      "Bash(find /c/Users/User -name zando*)"
+      "Bash(find /c/Users/User -name zando*)",
+      "Bash(ls:*)"
     ]
   }
 }

@@ -1,92 +1,90 @@
 import Header from "../SubComponents/Header";
 import ContactItem from "./ContactItem";
-import MyCV from '../../assets/MyCV.pdf'; // Ensure this path is correct
-import { LocationIcon, GmailIcon, YoutubeIcon, ResumeIcon } from "../SubComponents/Icons";
+import MyCV from '../../assets/MyCV.pdf';
+import { LocationIcon, GmailIcon, YoutubeIcon, ResumeIcon, TelegramIcon, PhoneIcon } from "../SubComponents/Icons";
 import ContactArea from "./ContactArea";
 
 function Contact() {
-    
 
     const sendEmail = () => {
-        const recipient = "sokheng429@gmail.com"; // Replace with the recipient's email
-        const subject = ""; 
-        const body = "Hello, "; 
-        
-        // Create the Gmail link
+        const recipient = "sokheng429@gmail.com";
+        const subject = "";
+        const body = "Hello, ";
         const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(recipient)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-        // Open the Gmail compose window
-        window.open(gmailLink, '_blank'); // Use '_blank' to open in a new tab
+        window.open(gmailLink, '_blank');
     };
 
-    // Updated contactData
     const contactData = [
-    {
-        id: 1,
-        icon: <ResumeIcon />,
-        title: "Resume",
-        detail: (
-            <a
-                href={MyCV}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="plink"
-            >
-                View PDF
-            </a>
-        ),
-    },
-    {
-        id: 2,
-        icon: <GmailIcon />,
-        title: "Gmail",
-        detail: (
-            <a onClick={sendEmail} className="plink">
-                sokheng429@gmail.com
-            </a>
-        ),
-    },
-    {
-        id: 3,
-        icon: <YoutubeIcon />,
-        title: "Youtube",
-        detail: "@HengZG",
-        link: "https://www.youtube.com/@HengZG"
-    },
-    {
-        id: 4,
-        icon: <LocationIcon />,
-        title: "Location",
-        detail: "Phnom penh, Cambodia",
-        link: "https://maps.app.goo.gl/kr8PhsKdZZVagVeM6"
-    },
-];
+        {
+            id: 1,
+            icon: <ResumeIcon />,
+            title: "Resume",
+            detail: "View my CV",
+            link: MyCV,
+        },
+        {
+            id: 2,
+            icon: <GmailIcon />,
+            title: "Email",
+            detail: "sokheng429@gmail.com",
+            onClick: sendEmail,
+        },
+        {
+            id: 3,
+            icon: <TelegramIcon size={28} />,
+            title: "Telegram",
+            detail: "@SokHeng_4290",
+            link: "https://t.me/SokHeng_4290",
+        },
+        {
+            id: 4,
+            icon: <PhoneIcon />,
+            title: "Phone",
+            detail: "+855 31 832 5599",
+            link: "tel:+855318325599",
+        },
+        {
+            id: 5,
+            icon: <YoutubeIcon />,
+            title: "Youtube",
+            detail: "@HengZG",
+            link: "https://www.youtube.com/@HengZG",
+        },
+        {
+            id: 6,
+            icon: <LocationIcon />,
+            title: "Location",
+            detail: "Phnom Penh, Cambodia",
+            link: "https://maps.app.goo.gl/kr8PhsKdZZVagVeM6",
+        },
+    ];
 
     return (
         <section id="contact">
-          <div className="about container col-xl-10 col-xxl-8 px-5">
-            <div className="row flex-lg-row align-items-start">
-              <Header 
-              activeTitle={"Contact"}
-              h2Title={"Don't be shy! Hit me up! 👇"}/>
+            <div className="container col-xl-10 col-xxl-8 px-4 py-5">
+                <Header
+                    activeTitle={"Contact"}
+                    h2Title={"Don't be shy! Hit me up!"}
+                />
 
-            <ContactArea />
-
-            <div className="row px-5 align-items-start mb-5 pb-5">
-                {contactData.map(item => (
-                    <ContactItem
-                        key={item.id}
-                        icon={item.icon}
-                        title={item.title}
-                        detail={item.detail}
-                        link={item.link} // Now this will render the button
-                    />
-                ))}
+                <div className="contact-grid">
+                    <div className="contact-cards-col">
+                        {contactData.map((item) => (
+                            <ContactItem
+                                key={item.id}
+                                icon={item.icon}
+                                title={item.title}
+                                detail={item.detail}
+                                link={item.link}
+                                onClick={item.onClick}
+                            />
+                        ))}
+                    </div>
+                    <div className="contact-form-col">
+                        <ContactArea />
+                    </div>
+                </div>
             </div>
-
-
-            </div>      
-          </div>
         </section>
     );
 }

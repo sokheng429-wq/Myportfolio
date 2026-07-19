@@ -128,11 +128,20 @@ export function TelegramIcon({ size = 32 }) {
     >
       <path
         d="M21.5 2.5L2.9 9.8c-1.3.5-1.3 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.1.8.7.8.5 0 .7-.2 1-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.2-15c.3-1.2-.5-1.7-1.4-1.3z"
-        fill="currentColor"
+        fill="#147EFB"
       />
     </svg>
   );
 }
+
+export function PhoneIcon() {
+    return (
+        <svg style={{ height: 26 }} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 5.5C3 14.0604 9.93959 21 18.5 21C19.3284 21 20 20.3284 20 19.5V16.5858C20 16.1453 19.716 15.759 19.2984 15.6067L15.1792 14.0941C14.7257 13.9275 14.2227 14.0765 13.9255 14.4647L12.7716 15.9945C10.6413 15.046 8.95402 13.3587 8.00548 11.2284L9.53533 10.0745C9.92349 9.77727 10.0725 9.27428 9.90589 8.82081L8.3933 4.70161C8.24098 4.28404 7.85473 4 7.41421 4H4.5C3.67157 4 3 4.67157 3 5.5Z" stroke="#147EFB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    );
+}
+
 export function JavaIcon({ size = 32 }) {
   return (
     <svg
