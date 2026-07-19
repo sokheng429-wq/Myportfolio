@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm -rf node_modules)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Read(//c/Users/User/Desktop/**)",
+      "Read(//c/Users/User/Downloads/**)",
+      "Read(//c/Users/User/Pictures/**)",
+      "Bash(find /c/Users/User -name zando*)"
+    ]
+  }
+}

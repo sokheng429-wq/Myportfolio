@@ -1,0 +1,12 @@
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import { ThemeProvider } from "./components/Contact/ThemContext";
+import "./styles/index.css";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(
+  <ThemeProvider>
+    <App />
+  </ThemeProvider>
+);
