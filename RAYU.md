@@ -26,18 +26,28 @@ This is a single-page portfolio website for THOEUN SOKHENG, built with **Vite + 
 - **Icons**: `react-icons` + custom inline SVGs in `src/components/SubComponents/Icons.jsx`
 - **Deploy**: `gh-pages` to GitHub Pages
 
+Note: `dotenv` and `emailjs` (non-browser) are in `package.json` but appear unused — Vite handles env vars natively, and `@emailjs/browser` is the EmailJS client actually used.
+
 ### Component tree
 
 ```
 App
 ├── Navbar (fixed-top, with dark/light toggle)
-├── Hero (intro + tech stack)
+│   └── {Brand, NavItem, Dropdown → DropdownItem, NavbarToggle}
+├── Hero (intro + social links + tech stack)
+│   └── {HeroImg, HeroText → SocialLinks, TechStack → {TechstackHeader, TechstackItems}}
 ├── About (image + text)
-├── Projects (project cards from data file)
+│   └── {AboutImg, AboutText}
+├── Projects (project cards)
+│   └── ProjectCard
 ├── Work (education + experience)
+│   └── {School → EducItem, WorkExp → WorkExpItem}
 ├── Contact (contact items + EmailJS form)
+│   └── {ContactItem, ContactArea}
 └── Footer
 ```
+
+Note: `src/components/Bio/Bio.jsx` exists but is **not imported in App.jsx** — it is dead code.
 
 ### Theming
 

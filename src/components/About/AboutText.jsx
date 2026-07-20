@@ -6,7 +6,7 @@ function AboutText() {
         },
         {
             label: "Frameworks",
-            items: ["React", "Next.js", "Spring Boot", "Node.js", "Express", "FastAPI", "Flutter", "Laravel"],
+            items: ["React", "React Native", "Next.js", "Spring Boot", "Node.js", "Express", "FastAPI", "Flutter", "Laravel"],
         },
         {
             label: "UI / Styling",

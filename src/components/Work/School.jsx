@@ -14,8 +14,9 @@ function School() {
         },
         {
             title: "Beltie University",
-            duration: "2024 - Present Year 4 Semester 2",
+            duration: "2024 - Present | Year 4, Semester 2",
             link: "https://www.beltei.edu.kh/biu/asaihl",
+            subtitle: "Software Engineering",
         },
     ];
 
@@ -27,6 +28,7 @@ function School() {
                     title={item.title}
                     duration={item.duration}
                     link={item.link}
+                    subtitle={item.subtitle}
                 />
             ))}
         </div>
