@@ -27,8 +27,8 @@ function AboutText() {
     ];
 
     const bioStats = [
-        { label: "Birthday", value: "May 23, 2003", icon: "🎂" },
-        { label: "Blood Type", value: "B", icon: "🩸" },
+        { label: "Birthday", value: "May 23, 2003", icon: "\uD83C\uDF82" },
+        { label: "Blood Type", value: "B", icon: "\uD83E\uDE78" },
     ];
 
     return (
@@ -71,16 +71,16 @@ function AboutText() {
             <div className="about-skills">
                 <p className="about-skills-title">Technical Skills</p>
                 <div className="skills-grid">
-                    {skillGroups.map((group, i) => (
-                        <div key={i} className="skill-group">
-                            <span className="skill-group-label">{group.label}</span>
-                            <div className="skill-group-tags">
-                                {group.items.map((skill, j) => (
-                                    <span key={j} className="skill-tag">{skill}</span>
-                                ))}
+                        {skillGroups.map((group, i) => (
+                            <div key={i} className="skill-group">
+                                <span className="skill-group-label">{group.label}</span>
+                                <div className="skill-group-tags">
+                                    {group.items.map((skill, j) => (
+                                        <span key={j} className="skill-tag">{skill}</span>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
                 </div>
             </div>
         </div>

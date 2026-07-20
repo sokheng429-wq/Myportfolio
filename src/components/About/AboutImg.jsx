@@ -4,10 +4,10 @@ import Coding from "../../assets/img/coder.png";
 function AboutImg() {
     return (
         <div className="col-lg-5 col-md-5 col-sm-12 col-12 text-center about-pic pt-3">
-            <img src={Maths} height="auto" width="1440" className="img-fluid p-3" />
+            <img src={Maths} alt="Math illustration" className="img-fluid about-maths-img" />
             <div className="main">
-                <img src={Coding} width="170" height="170" />
-                <svg id="rotatingText" viewBox="0 0 200 200" width="200" height="200">
+                <img src={Coding} alt="Coder" className="main-coder" />
+                <svg className="main-ring" viewBox="0 0 200 200">
                     <defs>
                         <path
                             id="circle"

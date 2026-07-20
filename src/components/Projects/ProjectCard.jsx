@@ -30,9 +30,9 @@ function ProjectCard({title , description , imgSrc , navId ,codeLink , codeLinks
 
                             <h2 className="card-title h3 display-7 fw-bold text-body-emphasis lh-1 mb-4">{title}</h2>
                             <p className="card-text fs-5 ">{description}</p>
-                            <div className="d-flex justify-content-center ">
+                            <div className="d-flex justify-content-center project-tech-list">
                                 {technologies.map((tech, index) => (
-                                    <p key={index} className="fs-6 mb-0  plink p-3">{tech}</p>
+                                    <span key={index} className="project-tech-tag">{tech}</span>
                                 ))}
                             </div>
                             

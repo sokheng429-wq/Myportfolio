@@ -11,8 +11,8 @@ function Projects () {
 
                 <div id="proj1"></div>
 
-                <div className="off-white about container col-xl-10 col-xxl-8 px-5 py-5 mt-5 ">
-                    <div className="row flex-lg-row align-items-center g-lg-5 py-5">
+                <div className="off-white about container col-xl-10 col-xxl-8 px-4 px-lg-5 py-4 py-lg-5 mt-4 mt-lg-5 ">
+                    <div className="row flex-lg-row align-items-center g-lg-5 py-3 py-lg-5">
                   
                   <Header 
                   activeTitle={"PROJECTS"} 

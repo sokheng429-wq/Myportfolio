@@ -1,14 +1,19 @@
 {
   "permissions": {
     "allow": [
-      "Bash(rm -rf node_modules)",
-      "Bash(npm install:*)",
+      "Bash(npx --no-install playwright --version)",
+      "Read(//c/Program Files/Google/Chrome/Application/**)",
+      "Read(//c/Program Files \\(x86\\)/Microsoft/Edge/Application/**)",
+      "Read(//c/Program Files/Microsoft/Edge/Application/**)",
+      "Bash(mkdir -p /tmp/shots)",
+      "Bash(CHROME=\"/c/Program Files/Google/Chrome/Application/chrome.exe\" \"$CHROME\" --headless --disable-gpu --hide-scrollbars --window-size=375,2400 --screenshot=/tmp/shots/mobile.png http://localhost:5174/)",
+      "Bash(CHROME=\"/c/Program Files/Google/Chrome/Application/chrome.exe\" \"$CHROME\" --headless --disable-gpu --hide-scrollbars --window-size=375,6000 --screenshot=/tmp/shots/mobile-full.png http://localhost:5174/)",
       "Bash(npm run:*)",
-      "Read(//c/Users/User/Desktop/**)",
-      "Read(//c/Users/User/Downloads/**)",
-      "Read(//c/Users/User/Pictures/**)",
-      "Bash(find /c/Users/User -name zando*)",
-      "Bash(ls:*)"
+      "Bash(CHROME=\"/c/Program Files/Google/Chrome/Application/chrome.exe\" \"$CHROME\" --headless --disable-gpu --hide-scrollbars --window-size=375,6000 --screenshot=/tmp/shots/mobile-fixed.png http://localhost:5174/)",
+      "Bash(CHROME=\"/c/Program Files/Google/Chrome/Application/chrome.exe\" \"$CHROME\" --headless --disable-gpu --hide-scrollbars --window-size=375,6000 --screenshot=/tmp/shots/mobile-v2.png http://localhost:5175/)",
+      "Bash(CHROME=\"/c/Program Files/Google/Chrome/Application/chrome.exe\")",
+      "Bash(\"$CHROME\" --headless --disable-gpu --hide-scrollbars --window-size=375,6000 --screenshot=\"C:/Users/LINGFU~1/AppData/Local/Temp/shots/mobile-v3.png\" http://localhost:5176/)",
+      "Bash(\"$CHROME\" --headless --disable-gpu --hide-scrollbars --window-size=1280,5000 --screenshot=\"C:/Users/LINGFU~1/AppData/Local/Temp/shots/desktop-v3.png\" http://localhost:5176/)"
     ]
   }
 }
