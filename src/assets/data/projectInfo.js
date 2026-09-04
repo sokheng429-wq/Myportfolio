@@ -13,6 +13,22 @@ const projects = [
     {
         id: 1,
         navId: "1",
+        title: 'Website Information + Inventory System',
+        description: 'still on development, this is a web application for booking elephant tour in cambodia, build with reactjs and redux for state management. it is working now still need deverlop only socail login and register next backend deploy on render it only wake for 15 minute open backend demo for it working',
+        imgSrc: el,
+        codeLinks: [
+            { label: 'Frontend', url: 'https://github.com/sokheng429-wq/B-Frontend' },
+            { label: 'Backend', url: 'https://github.com/sokheng429-wq/B-Backend' },
+        ],
+        demoLinks: [
+            { label: 'Frontend', url: '' },
+            { label: 'Backend', url: '' },
+        ],
+        technologies: ['Reactjs', 'SpringBoot', 'PostgreSQL-Neon']
+    },
+    {
+        id: 2,
+        navId: "2",
         title: 'Elephant Tour Booking System Web Application 🐘',
         description: 'still on development, this is a web application for booking elephant tour in cambodia, build with reactjs and redux for state management. it is working now still need deverlop only socail login and register next backend deploy on render it only wake for 15 minute open backend demo for it working',
         imgSrc: el,
@@ -24,11 +40,11 @@ const projects = [
             { label: 'Frontend', url: 'https://mdkelephant.fit/' },
             { label: 'Backend', url: 'https://ebm-backend.onrender.com' },
         ],
-        technologies: ['Reactjs', 'SpringBoot','MySQL']
+        technologies: ['Reactjs', 'SpringBoot', 'MySQL']
     },
     {
-        id: 2,
-        navId: "2",
+        id: 3,
+        navId: "3",
         title: 'Pinky Perfume 💄',
         description: 'A perfume e-commerce web application with React frontend and Spring Boot backend API. it working now but still need to add more features like payment and social login and register backend deploy on render it only wake for 15 minute open backend demo for it working',
         imgSrc: pink,
@@ -43,8 +59,8 @@ const projects = [
         technologies: ['Reactjs', 'Spring Boot', 'PostgreSQL']
     },
     {
-        id: 3,
-        navId: "3",
+        id: 4,
+        navId: "4",
         title: 'Homerental 🏠',
         description: 'A home rental web application with React frontend and FastAPI backend. This project is still under development, and I am actively working on it to enhance its features and functionality. backend deploy on render it only wake for 15 minute open backend demo for it working',
         imgSrc: homerental,
@@ -59,8 +75,8 @@ const projects = [
         technologies: ['Reactjs', 'FastAPI', 'PostgreSQL']
     },
     {
-        id: 4,
-        navId: "4",
+        id: 5,
+        navId: "5",
         title: 'Zando 📱',
         description: 'A Flutter mobile application.',
         imgSrc: zando,
@@ -69,8 +85,8 @@ const projects = [
         technologies: ['Flutter', 'Dart']
     },
     {
-        id: 5,
-        navId: "5",
+        id: 6,
+        navId: "6",
         title: 'DeliveryFood 🍔',
         description: 'A food delivery mobile application built with Flutter still under derverloping .',
         imgSrc: food,
@@ -79,8 +95,8 @@ const projects = [
         technologies: ['Flutter', 'Dart']
     },
     {
-        id: 6,
-        navId: "6",
+        id: 7,
+        navId: "7",
         title: 'Students Management 📚',
         description: 'This is management system for students, build with springboot java and mysql database',
         imgSrc: student,
@@ -89,8 +105,8 @@ const projects = [
         technologies: ['Java', 'Spring Boot', 'MySQL']
     },
     {
-        id: 7,
-        navId: "7",
+        id: 8,
+        navId: "8",
         title: 'CamLandTraveler 📢',
         description: 'reactjs website build for test deployment on cloudfare',
         imgSrc: camland,
@@ -99,18 +115,18 @@ const projects = [
         technologies: ['Node', 'React', 'Tailwind']
     },
     {
-        id: 8,
-        navId: "8",
+        id: 9,
+        navId: "9",
         title: 'SPRINGSECURITY ',
         description: 'A basic Spring Boot and Spring Security authentication project.',
         imgSrc: login,
         codeLink: 'https://github.com/sokheng429-wq/SPRINGSECURITY.git',
         demoLink: 'https://youtu.be/UF1X8qwNKTs',
-        technologies: ['Spring Boot','MySQL']
+        technologies: ['Spring Boot', 'MySQL']
     },
     {
-        id: 9,
-        navId: "9",
+        id: 10,
+        navId: "10",
         title: 'EMS (Employee Management System) ',
         description: 'A simple employee management system built with Spring Boot and PostgreSQL.',
         imgSrc: ems,
@@ -120,16 +136,6 @@ const projects = [
         ],
         demoLink: 'https://www.youtube.com/watch?v=cy6v3E6Rf0A',
         technologies: ['Reactjs', 'Spring Boot', 'PostgreSQL']
-    },
-    {
-        id: 10,
-        navId: "10",
-        title: 'Mini-Car 🚗',
-        description: "still on development, this is a mini car game build with nextjs and nodejs SQL database use PostgreSQL",
-        imgSrc: car,
-        codeLink: 'https://github.com/sokheng429-wq/Mini-cars.git',
-        demoLink: 'https://www.youtube.com/watch?v=cy6v3E6Rf0A',
-        technologies: ['PostgreSQL', 'MUI', 'Node', 'NextJS']
     },
 
 ];

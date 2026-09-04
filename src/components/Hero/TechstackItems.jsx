@@ -28,7 +28,6 @@ function TechstackItems() {
         { svg: <SiMui size={28} color="#007fff" />, bgColor: "var(--tech-stack-bg)", label: "Material UI" },
         { svg: <SiFastapi size={28} color="#009688" />, bgColor: "var(--tech-stack-bg)", label: "FastAPI" },
         { svg: <SiFlutter size={28} color="#02569B" />, bgColor: "var(--tech-stack-bg)", label: "Flutter" },
-        { svg: <SiLaravel size={28} color="#FF2D20" />, bgColor: "var(--tech-stack-bg)", label: "Laravel" },
     ];
 
     return (
