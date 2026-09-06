@@ -8,7 +8,7 @@ import {
 } from "../SubComponents/Icons";
 
 import { FaJava, FaReact } from "react-icons/fa";
-import { SiSpringboot, SiMysql, SiMui, SiFastapi, SiFlutter, SiLaravel, SiPostgresql } from "react-icons/si";
+import { SiSpringboot, SiMysql, SiMui, SiFastapi, SiFlutter, SiPostgresql } from "react-icons/si";
 import { SiNextdotjs } from "react-icons/si";
 
 function TechstackItems() {

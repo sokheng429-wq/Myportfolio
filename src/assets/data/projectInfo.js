@@ -2,12 +2,12 @@ import student from "../img/proj/student.jpg"
 import camland from "../img/proj/camland.jpg"
 import el from "../img/proj/el.jpg"
 import login from "../img/proj/loginspring.jpg"
-import car from "../img/proj/car.jpg"
 import ems from "../img/ems.jpg"
 import pink from "../img/proj/pinky.jpg"
 import homerental from "../img/proj/homerantel.jpg"
 import zando from "../img/proj/zando.jpg"
 import food from "../img/proj/food.jpg"
+import inventory from "../img/iven.jpg"
 
 const projects = [
     {
@@ -15,14 +15,13 @@ const projects = [
         navId: "1",
         title: 'Website Information + Inventory System',
         description: 'still on development, this is a web application for booking elephant tour in cambodia, build with reactjs and redux for state management. it is working now still need deverlop only socail login and register next backend deploy on render it only wake for 15 minute open backend demo for it working',
-        imgSrc: el,
+        imgSrc: inventory,
         codeLinks: [
-            { label: 'Frontend', url: 'https://github.com/sokheng429-wq/B-Frontend' },
-            { label: 'Backend', url: 'https://github.com/sokheng429-wq/B-Backend' },
+            { label: 'Frontend', url: 'https://github.com/sokheng429-wq/FreshMart-Frontend' },
+            { label: 'Backend', url: 'https://github.com/sokheng429-wq/FreshMart-Backend' },
         ],
         demoLinks: [
-            { label: 'Frontend', url: '' },
-            { label: 'Backend', url: '' },
+            { label: 'DemoVideo', url: 'https://youtu.be/7fujDGT2ScY' },
         ],
         technologies: ['Reactjs', 'SpringBoot', 'PostgreSQL-Neon']
     },
